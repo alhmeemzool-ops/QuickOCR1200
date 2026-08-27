@@ -96,8 +96,7 @@ object OcrEngine {
         val raw = api.getUTF8Text().orEmpty()
         val normalized = normalizeDigitsStrict(raw)
         val text = if (normalized != null) normalized else ""
-        return Ocr(text, api.meanConfidence.coerceIn(0, 100))
-    }
+return Ocr(text, api.meanConfidence().coerceIn(0, 100))
 
     private fun normalizeDigitsStrict(value: String): String? {
         val s = value.replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "")
