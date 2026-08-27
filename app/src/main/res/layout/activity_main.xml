@@ -1,1 +1,22 @@
 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center" android:padding="28dp">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Quick OCR" android:textSize="32sp" android:textStyle="bold"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" android:gravity="center"
+        android:text="بعد التفعيل، لا تحتاج إلى فتح التطبيق. ضع المؤشر في خانة الإدخال، وجّه الرقم إلى منتصف الكاميرا، ثم هز الهاتف هزّة قوية مقصودة. سيقرأه ويلصقه تلقائيًا دون إظهار الكاميرا."
+        android:textSize="17sp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enableButton" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="28dp"
+        android:text="تفعيل Quick OCR"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/testButton" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:text="اختبار القراءة الآن"/>
+</LinearLayout>
