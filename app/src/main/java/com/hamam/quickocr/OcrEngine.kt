@@ -91,7 +91,7 @@ object OcrEngine {
     private data class Ocr(val text: String, val confidence: Int)
 
     private fun run(api: TessBaseAPI, bitmap: Bitmap): Ocr {
-        api.setPageSegMode(TessBaseAPI.PSM_SINGLE_LINE)
+        api.setPageSegMode(TessBaseAPI.PageSegMode.PSM_SINGLE_LINE)
         api.setImage(bitmap)
         val raw = api.getUTF8Text().orEmpty()
         val normalized = normalizeDigitsStrict(raw)
